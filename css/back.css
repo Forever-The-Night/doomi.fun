@@ -1,0 +1,83 @@
+
+* ::selection {
+  background: none;
+}
+
+body {
+  margin: 0;
+  background: #b4d1fd;
+  padding: 0;
+}
+body::before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "."; 
+  opacity: 0.4;
+  background-image: url("https://t.tdo.ink/Yorader/VZ5LLHf0.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.back {
+
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+
+.back span {
+  font-family: sans-serif;
+  position: absolute;
+  width: 100vw;
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 5rem;
+  word-break: break-all;
+  text-align: center;
+}
+.back span.fill {
+  color: #e0e2fd;
+  z-index: 0;
+}
+.back span.outline {
+  color: transparent;
+  -webkit-text-stroke: 0.5px #e0e2fd;
+  z-index: 2;
+}
+.snow {
+  transition: 2s ease-in-out;
+}
+
+
+.star {
+  position: absolute;
+  width: 40px; /* nSize */
+  height: 40px; /* nSize */ 
+  background-color: #222; /* baseColor */
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  transform-origin: center center;
+  animation: swing linear infinite;
+}
+
+@keyframes swing {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: translate(0%, 80%) scale(0.33) rotate(120deg);
+    filter: blur(1rem);
+  }
+}

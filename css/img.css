@@ -1,0 +1,67 @@
+.parent {
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    overflow-x: hidden;
+    position: absolute;
+    -webkit-box-shadow: 0 0 88px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 88px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 88px 5px rgba(0, 0, 0, 0.75);
+  }
+
+
+  .slider {
+    position: absolute;
+    width: 400%;
+    height: 100%;
+    display: inline-flex;
+
+  }
+
+  .slide1 {
+    left: -5px;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    width: 25%;
+    height: 100%;
+    z-index: 10;
+    transition: 1.4s;
+    top: 0;
+    overflow: hidden;
+  }
+
+  .slide2{
+    left: -5px;
+    position: absolute;
+    overflow:auto;
+    width: 25%;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    z-index: 100;
+    transition: 1.4s;
+    top:100%;
+    display: none;
+  }
+
+  .steap {
+    stroke-width: 0;
+  }
+
+  .streak {
+    opacity: 1;
+    stroke-width: 40vh;
+  }
+
+  @media (max-width: 700px) {
+    .parent {
+      margin-left: 1%;
+    }
+  }

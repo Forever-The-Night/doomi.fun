@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哆咪の小黑板</title>
+    <link rel="stylesheet" href="./css/back.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/img.css">
+    <link rel="stylesheet" href="./css/temp.css">
+    <script src="js/jquery.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.let_it_snow.js"></script>
+    <style>
+        .alert-pormpt {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+        }
+
+        canvas {
+            pointer-events: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+        }
+
+        canvas.flare {
+            opacity: 0.5;
+        }
+
+        .cover_icon {
+            opacity: 0;
+            position: relative;
+            top: 20px;
+            animation: left-top-right-bottom 2s linear infinite;
+        }
+
+        @keyframes left-top-right-bottom {
+            50% {
+                opacity: 100%;
+                top: 0;
+            }
+
+            100% {
+                opacity: 20%;
+                top: 20px;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("canvas.snow").let_it_snow({
+                windPower: 3,
+                speed: 1,
+                count: 250,
+                size: 0,
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <canvas width="100%" height="100%" class="snow" id="snow"></canvas>
+    <div class='parent' id="body">
+        <div class='slider'>
+            <div id='slide1' class='slide1 up1'>
+                <div class="disappear">
+                    <span>D</span> <span>o</span> <span>O</span> <span>M</span> <span>i</span>
+                </div>
+                <div class="lite">
+                    <div style="font-size: 5vh;">哆咪DoOMi</div>
+                    <div>歌单站</div>
+                    <div style="color: rgb(170, 170, 170); font-weight: 100;">———————————————</div>
+                    <div style="color: rgb(206, 206, 206); font-size: 3vh;">你爱学习吗 我爱学习<br />
+                        我爱！！！blender！！！！</div>
+                    <div>
+                        <ul class="navigation" data-v-06627829="">
+                            <li class="navigation_item" data-v-06627829=""><a href="https://live.bilibili.com/30490582"
+                                    class="blog-button" target="_blank" data-v-06627829="">✝︎₊⁺直播间₊⁺✝︎</a></li>
+                            <li class="navigation_item" data-v-06627829=""><a
+                                    href="https://space.bilibili.com/1897888979" class="blog-button" target="_blank"
+                                    data-v-06627829="">✝︎♡个人空间♡✝︎</a></li>
+                            <li class="navigation_item" data-v-06627829=""><a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=c7-UWNCcv9yEvaLdlsxNAXcJyufffHKL&authKey=dTOfQGXpoWGj8yDjSHiOvDAcNfAPRQfkFgw9o632vDcPnH7q0%2FRsOP3G3sNB8%2BUi&noverify=0&group_code=481283605" class="blog-button"
+                                    target="_blank" data-v-06627829="">✝︎DoOMiの窝✝︎</a></li>
+                        </ul>
+                    </div>
+                    <div class="arrow_container" data-v-06627829="">
+                        <br>
+                        <svg id="cover_icon" class="cover_icon" width="40" height="40" viewBox="0 0 1024 1024"
+                            xmlns="http://www.w3.org/2000/svg" data-v-365b8594="" data-v-06627829="">
+                            <path fill="currentColor"
+                                d="M831.872 340.864L512 652.672 192.128 340.864a30.592 30.592 0 00-42.752 0 29.12 29.12 0 000 41.6L489.664 714.24a32 32 0 0044.672 0l340.288-331.712a29.12 29.12 0 000-41.728 30.592 30.592 0 00-42.752 0z"
+                                data-v-06627829=""></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div id='slide2' class='slide2'>
+                <img id="record" src="/images/icon.jpg" alt="">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="226px" height="226px"
+                    viewBox="0 0 226 226" enable-background="new 0 0 226 226" xml:space="preserve">
+
+
+                    <g id="needle">
+                        <circle fill="#000" cx="191.664" cy="26.333" r="18.333" />
+                        <path fill="#daf7f9" d="M195.152,38.158c5.111-1.505,8.845-6.226,8.845-11.825c0-6.811-5.521-12.333-12.333-12.333
+		c-6.811,0-12.333,5.521-12.333,12.333c0,3.628,1.576,6.88,4.07,9.137l-11.944,91.183c-1.618-0.176-3.246,0.638-4.014,2.18
+		l-12.033,24.169c-0.985,1.979-0.18,4.379,1.797,5.364l9.847,4.901c1.977,0.986,4.379,0.181,5.363-1.797l5.317-10.681l4.804,2.73
+		l1.482-2.607l-4.948-2.812l5.378-10.801c0.962-1.932,0.207-4.261-1.675-5.285c0.083-0.244,0.145-0.499,0.179-0.764L195.152,38.158z
+		" />
+                    </g>
+                </svg>
+                <br><br>
+                <p> 点击歌名既可复制点歌，弹幕输入点歌就好~</p>
+                <p> 点击表头可以搜索~</p>
+                <p> 定下心慢慢跟着做就一定会有进步的哦</p>
+                <p> 祝大家在建模的道路越走越牛</p>
+                <div class="card" id="card">
+                    <ul data-v-6962b5b4="" class="Song-list-main-header-ul">
+                        <li data-v-6962b5b4=""><button onclick="onClick(this)" data-v-6962b5b4=""
+                                class="el-button el-button--default is-round">
+                                全部歌曲
+                            </button></li>
+                        <li data-v-6962b5b4=""><button onclick="onClick(this)" data-v-6962b5b4=""
+                                class="el-button el-button--default is-round">
+                                英文
+                            </button></li>
+                        <li data-v-6962b5b4=""><button onclick="onClick(this)" data-v-6962b5b4=""
+                                class="el-button el-button--default is-round">
+                                ACG
+                            </button></li>
+                        <li data-v-6962b5b4=""><button onclick="onClick(this)" data-v-6962b5b4=""
+                                class="el-button el-button--default is-round">
+                                舰长
+                            </button></li>
+                        <li data-v-6962b5b4=""><button onclick="onClick(this)" data-v-6962b5b4=""
+                                class="el-button el-button--default is-round">
+                                日文
+                            </button></li>
+                        <li data-v-6962b5b4=""><button onclick="onClick(this)" data-v-6962b5b4=""
+                                class="el-button el-button--default is-round">
+                                舒缓
+                            </button></li>
+                        <li data-v-6962b5b4=""><button onclick="onClick(this)" data-v-6962b5b4=""
+                                class="el-button el-button--default is-round">
+                                中文
+                            </button></li>
+                        <li data-v-6962b5b4=""><button onclick="onClick(this)" data-v-6962b5b4=""
+                                class="el-button el-button--default is-round">
+                                流行
+                            </button></li>
+                        <li data-v-6962b5b4=""><button onclick="onClick(this)" data-v-6962b5b4=""
+                                class="el-button el-button--default is-round">
+                                粤语
+                            </button></li>
+                        <li data-v-6962b5b4=""><button onclick="onClick(this)" data-v-6962b5b4=""
+                                class="el-button el-button--default is-round">
+                                韩文
+                            </button></li>
+                        <li data-v-6962b5b4=""><button onclick="onClick(this)" data-v-6962b5b4=""
+                                class="el-button el-button--default is-round">
+                                儿歌
+                            </button></li>
+                    </ul>
+                    <table id="myTable">
+                        <tr>
+                            <th><input name="key1" type="text" id="key1" onkeydown="onSearch(this,0)"
+                                    placeholder="歌名🔍" /></th>
+                            <th><input name="key2" type="text" id="key2" onkeydown="onSearch(this,1)"
+                                    placeholder="歌手🔍" /></th>
+                            <th><input name="key3" type="text" id="key3" onkeydown="onSearch(this,2)"
+                                    placeholder="类型🔍" /></th>
+                            <th><input name="key4" type="text" id="key4" onkeydown="onSearch(this,3)"
+                                    placeholder="备注🔍" /></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/img.js"></script>
+    <script src="./js/ser.js"></script>
+</body>
+
+</html>
